@@ -1,9 +1,18 @@
 import React from "react";
+import s from './Message.module.css'
+type PropsMessageType ={
+    avatar:string
+    name: string,
+    message: string,
 
-function AlternativeMessage() {
+}
+function AlternativeMessage(props:PropsMessageType) {
     return (
-        <div>
 
+            <div className={s.message}>
+                <img src={props.avatar}/>
+                <div> {props.name}</div>
+                <div> {props.message}?</div>
         </div>
     );
 }
