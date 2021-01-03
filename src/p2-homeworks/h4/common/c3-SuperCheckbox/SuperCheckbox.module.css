@@ -1,7 +1,9 @@
 .checkbox {
-
+margin: 5px;
 }
 
-.spanClassName {
 
+.spanClassName {
+font-family: "Arial Black";
+    cursor: pointer;
 }

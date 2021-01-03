@@ -1,5 +1,12 @@
 .superInput {
-
+    width: 10%;
+    padding: 0 0 10px 0;
+    border: 1px solid #bfcd85;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+    font-family: Arial;
+    font-size: 20px;
 }
 
 .errorInput {
