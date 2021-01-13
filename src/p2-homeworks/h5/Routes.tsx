@@ -1,27 +1,39 @@
-import React from "react";
+import React from 'react'
+import {Switch, Route, Redirect} from "react-router-dom";
+import PreJunior from "./pages/PreJunior";
+import Error404 from "./pages/Error404";
+import Middle from "./pages/Middle";
+import Senior from "./pages/Senior";
+import Start from "./pages/StartLearn";
 
 export const PATH = {
     PRE_JUNIOR: "/pre-junior",
-    // add paths
+    MIDDLE: '/midle',
+    SENIOR: '/senior',
+    START: '/start'
 }
 
 function Routes() {
     return (
         <div>
             {/*Switch выбирает первый подходящий роут*/}
-            {/*<Switch>*/}
 
-            {/*в начале мы попадаем на страницу "/" и переходим сразу на страницу PRE_JUNIOR*/}
-            {/*exact нужен чтоб указать полное совподение (что после "/" ничего не будет)*/}
-            {/*<Route path={"/"} exact render={() => <Redirect to={PRE_JUNIOR}/>}/>*/}
+            <Switch>
 
-            {/*<Route path={PRE_JUNIOR} render={() => <PreJunior/>}/>*/}
-                // add routes
+                {/*в начале мы попадаем на страницу "/" и переходим сразу на страницу PRE_JUNIOR*/}
+                {/*exact нужен чтоб указать полное совподение (что после "/" ничего не будет)*/}
+                <Route path={"/"} exact render={() => <Redirect to={PATH.START}/>}/>
+                <Route path={PATH.START} render={() => <Start/>}/>
+                <Route path={PATH.PRE_JUNIOR} render={() => <PreJunior/>}/>
+                <Route path={PATH.MIDDLE} render={() => <Middle/>}/>
+                <Route path={PATH.SENIOR} render={() => <Senior/>}/>
 
-            {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
-            {/*<Route render={() => <Error404/>}/>*/}
 
-            {/*</Switch>*/}
+                {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
+                <Route render={() => <Error404/>}/>
+
+            </Switch>
+
         </div>
     );
 }

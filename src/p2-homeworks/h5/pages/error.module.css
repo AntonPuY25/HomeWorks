@@ -1,0 +1,15 @@
+.error {
+    display: block;
+    text-align: center;
+    border: 2px solid red;
+    padding: 50px;
+    margin: 20px;
+    color: red;
+    font-weight: bold;
+    font-family: Candara;
+    font-size: 50px;
+}
+
+.error .errorText {
+    font-family: "Bernard MT Condensed";
+}
