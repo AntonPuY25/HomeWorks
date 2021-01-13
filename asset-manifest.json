@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/HomeWorks/static/css/main.ad1540c9.chunk.css",
+    "main.js": "/HomeWorks/static/js/main.e25fb2e6.chunk.js",
+    "main.js.map": "/HomeWorks/static/js/main.e25fb2e6.chunk.js.map",
+    "runtime-main.js": "/HomeWorks/static/js/runtime-main.581b4619.js",
+    "runtime-main.js.map": "/HomeWorks/static/js/runtime-main.581b4619.js.map",
+    "static/js/2.68c7b8aa.chunk.js": "/HomeWorks/static/js/2.68c7b8aa.chunk.js",
+    "static/js/2.68c7b8aa.chunk.js.map": "/HomeWorks/static/js/2.68c7b8aa.chunk.js.map",
+    "index.html": "/HomeWorks/index.html",
+    "precache-manifest.e59f08f72f558cee386b320ddf8816c6.js": "/HomeWorks/precache-manifest.e59f08f72f558cee386b320ddf8816c6.js",
+    "service-worker.js": "/HomeWorks/service-worker.js",
+    "static/css/main.ad1540c9.chunk.css.map": "/HomeWorks/static/css/main.ad1540c9.chunk.css.map",
+    "static/js/2.68c7b8aa.chunk.js.LICENSE.txt": "/HomeWorks/static/js/2.68c7b8aa.chunk.js.LICENSE.txt",
+    "static/media/arrow.png": "/HomeWorks/static/media/arrow.8a5a39e1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.581b4619.js",
+    "static/js/2.68c7b8aa.chunk.js",
+    "static/css/main.ad1540c9.chunk.css",
+    "static/js/main.e25fb2e6.chunk.js"
+  ]
+}
