@@ -1,3 +1,36 @@
 .App {
 
 }
+
+.select {
+    border: 3px solid #000000;
+    padding: 5px;
+    width: 100px;
+    font-size: 20px;
+    text-align: right;
+    background-color: #b3bab9;
+    color: white;
+    font-weight: bold;
+    font-family: Constantia;
+}
+
+.option {
+    width: 100%;;
+    font-weight: bold;
+    font-family: Constantia;
+}
+
+.blockRadio {
+    padding: 15px;
+    margin-left: 10px;
+    font-size: 20px;
+    background-color: #e0e5b0;
+    color: black;
+    border-radius: 50%;
+    font-weight: bold;
+    font-family: Constantia;
+}
+
+.radio {
+    margin-top: 40px;
+}
