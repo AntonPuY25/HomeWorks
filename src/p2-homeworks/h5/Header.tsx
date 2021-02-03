@@ -17,10 +17,9 @@ function Header() {
             </div>
             <div onMouseOver={arrowHover} onMouseOut={arrowUnHover}  className={change?s.menu:s.menuHide}>
                 <ul>
-                    <li><NavLink to={PATH.START}>Let's Learn</NavLink></li>
-                    <li><NavLink to={PATH.PRE_JUNIOR}>Go to the Junior</NavLink></li>
-                    <li><NavLink to={PATH.MIDDLE}>Go to the Middle</NavLink></li>
-                    <li><NavLink to={PATH.SENIOR}>Go to Senior </NavLink></li>
+                    <li><NavLink to={PATH.PRE_JUNIOR}>PreJunior</NavLink></li>
+                    <li><NavLink to={PATH.Junior}>Junior</NavLink></li>
+                    <li><NavLink to={PATH.SuperJunior}>Junior++</NavLink></li>
                 </ul>
             </div>
 

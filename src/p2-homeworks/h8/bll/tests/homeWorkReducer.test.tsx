@@ -1,7 +1,7 @@
 import React from 'react';
-import {homeWorkReducer} from "../homeWorkReducer";
+import {homeWorkReducer, TypeStateReducer, AllActions} from "../homeWorkReducer";
 
-let initialState: any[];
+let initialState: TypeStateReducer[];
 
 beforeEach(() => {
     initialState = [
@@ -15,18 +15,19 @@ beforeEach(() => {
 });
 
 test("sort name up", () => {
-    const newState = homeWorkReducer(initialState, {type: "sort", payload: "up"});
-
-    console.log(newState);
-    // expect(...).toBe(...);
+    const newState = homeWorkReducer(initialState, AllActions.ActionUp);
+    expect(newState[0].name).toBe('Александр');
+    expect(newState[5].name).toBe('Кот');
 });
 test("sort name down", () => {
-    const newState = homeWorkReducer(initialState, {type: "sort", payload: "down"});
+    const newState = homeWorkReducer(initialState, AllActions.ActionDown);
 
-
+    expect(newState[5].name).toBe('Александр');
+    expect(newState[0].name).toBe('Кот');
 });
 test("check age 18", () => {
-    const newState = homeWorkReducer(initialState, {type: "check", payload: 18});
+    const newState = homeWorkReducer(initialState, AllActions.ActionAge);
 
-
+    expect(newState.length).toBe(4);
+    expect(newState[0].age).toBe(66);
 });

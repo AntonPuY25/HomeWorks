@@ -14,7 +14,7 @@ function PreJunior() {
 
 
         </div>
-    );
+);
 }
 
 export default PreJunior;
