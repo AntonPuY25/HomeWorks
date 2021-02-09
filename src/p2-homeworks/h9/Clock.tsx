@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import s from './clock.module.css'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0);
@@ -7,44 +8,54 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false);
 
     const stop = () => {
-        // stop
+        clearInterval(timerId)
     }
     const start = () => {
-        stop();
         const id: number = window.setInterval(() => {
-            // setDate
+            return setDate(new Date())
         }, 1000);
         setTimerId(id);
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)
     };
     const onMouseLeave = () => {
-        // close
+        setShow(false)
+
     };
 
-    const stringTime = "Time"; // fix with date
-    const stringDate = "Date"; // fix with date
+    const stringTime = date && `${date.getHours() < 10 ? '0' + date.getHours() : date.getHours()}
+    :${date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()}
+    :${date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()}`
+
+    const stringDate = date && `${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}
+    :${date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth()}
+    :${date.getFullYear() < 10 ? '0' + date.getFullYear() : date.getFullYear()}`
 
     return (
-        <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
-            </div>
+        <div className={s.allContainer}>
 
-            {show && (
-                <div>
-                    {stringDate}
+            <div className={s.clockContainer}>
+
+                <div className={s.time}
+                     onMouseEnter={onMouseEnter}
+                     onMouseLeave={onMouseLeave}
+                >
+                    {stringTime}
                 </div>
-            )}
 
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
+                {show && (
+                    <div className={s.data}>
+                        {stringDate}
+                    </div>
+                )}
+                <div className={s.buttons}>
+                    <SuperButton className={s.but1} onClick={start}>start</SuperButton>
+                    <SuperButton onClick={stop}>stop</SuperButton>
+                </div>
 
+            </div>
         </div>
     );
 }
