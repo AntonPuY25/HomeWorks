@@ -17,7 +17,6 @@ function HW12() {
         dispatch(changeThemeAC(value))
     }
 
-
     return (
         <div className={s[theme]}>
             <hr/>
