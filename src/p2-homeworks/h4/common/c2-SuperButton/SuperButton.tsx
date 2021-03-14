@@ -6,11 +6,13 @@ type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 
 type SuperButtonPropsType = DefaultButtonPropsType & {
     red?: string
+    sendRequest?:()=>void
 }
 
 const SuperButton: React.FC<SuperButtonPropsType> = (
     {
         red, className,children,
+        sendRequest,
         ...restProps// все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
@@ -18,6 +20,8 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
 
     return (
         <button
+            onClick={sendRequest}
+
             className={finalClassName}
             {...restProps} // отдаём кнопке остальные пропсы если они есть (children там внутри)
         >{children}</button>
